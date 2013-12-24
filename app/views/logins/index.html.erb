@@ -1,0 +1,39 @@
+<div class='top'>
+  <%= render 'layouts/nav/top_before_login' %>
+</div>
+
+<div class="container login">
+    <div class="row">
+      <div class="center span3 well">
+        <legend>Please Sign In</legend>
+        <!--<div class="alert alert-error">-->
+          <!--<a class="close" data-dismiss="alert" href="#">×</a>Incorrect Username or Password!-->
+        <!--</div>-->
+        <form method="POST" action="" accept-charset="UTF-8">
+          <input type="text" id="username" class="span3" name="username" placeholder="Username" />
+          <input type="password" id="password" class="span3" name="password" placeholder="Password" />
+          <label class="checkbox">
+            <input type="checkbox" name="remember" value="1" /> Remember Me
+            | <a href="#">Forget Password</a>
+          </label>
+          <div class="row">
+            <button type="submit" name="submit" class="btn btn-primary btn-block span3">Sign in</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>
+
+
+<script>
+    loginMarginTop();
+
+    $(window).resize(function(){
+        loginMarginTop();
+    });
+
+    function loginMarginTop(){
+        $(".login").css('margin-top', $(window).height()/2 - $('.login').outerHeight()*.7);
+    }
+
+</script>

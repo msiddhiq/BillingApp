@@ -4,6 +4,7 @@ class LoginsController < ApplicationController
   # GET /logins
   # GET /logins.json
   def index
+    puts "test"
     @logins = Login.all
   end
 

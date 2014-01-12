@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Paid by:</strong>
+  <%= @split.paid_by %>
+</p>
+
+<p>
+  <strong>Received by:</strong>
+  <%= @split.received_by %>
+</p>
+
+<p>
+  <strong>Owe amount:</strong>
+  <%= @split.owe_amount %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @split.status %>
+</p>
+
+<p>
+  <strong>Transaction:</strong>
+  <%= @split.transaction_id %>
+</p>
+
+<p>
+  <strong>Settled on:</strong>
+  <%= @split.settled_on %>
+</p>
+
+<p>
+  <strong>Remarks:</strong>
+  <%= @split.remarks %>
+</p>
+
+<%= link_to 'Edit', edit_split_path(@split) %> |
+<%= link_to 'Back', splits_path %>

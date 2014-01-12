@@ -1,0 +1,39 @@
+<h1>Listing splits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paid by</th>
+      <th>Received by</th>
+      <th>Owe amount</th>
+      <th>Status</th>
+      <th>Transaction</th>
+      <th>Settled on</th>
+      <th>Remarks</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @splits.each do |split| %>
+      <tr>
+        <td><%= split.paid_by %></td>
+        <td><%= split.received_by %></td>
+        <td><%= split.owe_amount %></td>
+        <td><%= split.status %></td>
+        <td><%= split.transaction_id %></td>
+        <td><%= split.settled_on %></td>
+        <td><%= split.remarks %></td>
+        <td><%= link_to 'Show', split %></td>
+        <td><%= link_to 'Edit', edit_split_path(split) %></td>
+        <td><%= link_to 'Destroy', split, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Split', new_split_path %>

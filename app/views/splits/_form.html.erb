@@ -1,0 +1,45 @@
+<%= form_for(@split) do |f| %>
+  <% if @split.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@split.errors.count, "error") %> prohibited this split from being saved:</h2>
+
+      <ul>
+      <% @split.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :paid_by %><br>
+    <%= f.number_field :paid_by %>
+  </div>
+  <div class="field">
+    <%= f.label :received_by %><br>
+    <%= f.number_field :received_by %>
+  </div>
+  <div class="field">
+    <%= f.label :owe_amount %><br>
+    <%= f.number_field :owe_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :transaction_id %><br>
+    <%= f.number_field :transaction_id %>
+  </div>
+  <div class="field">
+    <%= f.label :settled_on %><br>
+    <%= f.datetime_select :settled_on %>
+  </div>
+  <div class="field">
+    <%= f.label :remarks %><br>
+    <%= f.text_field :remarks %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

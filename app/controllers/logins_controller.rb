@@ -62,6 +62,15 @@ class LoginsController < ApplicationController
     end
   end
 
+  def test_to_remove
+    puts "am here"
+    respond_to do |format|
+        format.html { render 'bills/new'}
+        format.json { head :no_content }
+     end
+
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_login
@@ -73,3 +82,5 @@ class LoginsController < ApplicationController
       params.require(:login).permit(:userName, :password)
     end
 end
+
+

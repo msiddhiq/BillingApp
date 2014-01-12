@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  paid_by: 1
+  received_by: 1
+  owe_amount: 1
+  status: MyString
+  transaction_id: 1
+  settled_on: 2014-01-12 08:41:44
+  remarks: MyString
+
+two:
+  paid_by: 1
+  received_by: 1
+  owe_amount: 1
+  status: MyString
+  transaction_id: 1
+  settled_on: 2014-01-12 08:41:44
+  remarks: MyString

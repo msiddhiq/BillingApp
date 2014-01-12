@@ -1,4 +1,10 @@
 RoomBilling::Application.routes.draw do
+
+  resources :splits
+
+  resources :transactions
+
+  get 'test' => 'logins#test_to_remove'
   resources :logins
 
   root 'logins#index'

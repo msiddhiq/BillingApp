@@ -11,11 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131202210131) do
+ActiveRecord::Schema.define(version: 20140112164144) do
 
   create_table "logins", force: true do |t|
     t.string   "userName"
     t.string   "password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "splits", force: true do |t|
+    t.integer  "paid_by"
+    t.integer  "received_by"
+    t.integer  "owe_amount"
+    t.string   "status"
+    t.integer  "transaction_id"
+    t.datetime "settled_on"
+    t.string   "remarks"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "transactions", force: true do |t|
+    t.datetime "paid_on"
+    t.integer  "amount"
+    t.integer  "paid_by"
+    t.integer  "group"
+    t.integer  "type"
+    t.string   "remarks"
+    t.integer  "entered_by"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
